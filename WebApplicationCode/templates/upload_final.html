@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/upload_final.css') }}">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/js/intlTelInput.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+	<script src="{{ url_for('static', filename='js/upload_final.js') }}"></script>
+
+  <style type="text/css">
+    #msform input,
+    #msform textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 0px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: montserrat;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    .age{
+      width: 25%;
+    }
+
+
+  </style>
+
+</head>
+<body>
+<header>
+<div class="custom-padding">
+  <nav>
+    <div class="logo">covid-19 detector</div>
+
+    <ul class="menu-area">
+      <li><a href="{{ url_for('index') }}" >Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+<!-- Multi step form --> 
+<section class="multi_step_form" style="background-image: linear-gradient(rgba(255,255,255,0.45),rgba(255,255,255,0.45)),url('static\\img1.jpg')">  
+  <form id="msform" action="/success" method = "post" enctype="multipart/form-data">
+    <!-- Tittle -->
+    <div class="tittle">
+      <h2>UPLOAD PROCESS</h2>
+      <p>Complete the following process to get the predicted value</p>
+    </div>
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Patient Details</li>  
+      <li>Description</li> 
+      <li>Upload Image</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Patient Details</h2>
+        <h3 class="fs-subtitle">Mention Patient Details for Record</h3>
+        <input type="text" name="fname" placeholder="Full Name"/>
+        <input type="number" name="age" placeholder="Age" class="age" maxlength="2" size="2"/>
+        <input type="number" name="phone" placeholder="Phone" maxlength="10" size="10"/>
+        <textarea type="text" name="addr" placeholder="Address"></textarea>
+      <button type="button" class="action-button previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button>  
+    </fieldset>
+    <fieldset>
+     <h2 class="fs-title">Description</h2>
+        <h3 class="fs-subtitle">Mention patient sypmtoms</h3>
+        <input type="text" name="did" placeholder="Doctor id">
+        <textarea name="desc" placeholder="Description"></textarea>
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button>  
+    </fieldset>  
+    <fieldset>
+      <h5>Please upload the Chest X-ray Image of the patient.</h6>
+      <div class="input-group" style="padding-bottom: 20px"> 
+        <div class="custom-file">
+          <input type="file" accept="image/*"  id="upload" name="file" 
+          onchange="previewImage(event)" class="custom-file-input"><br>
+          <label class="custom-file-label" for="upload"><i class="ion-android-cloud-outline"></i>Choose file</label>
+        </div>
+      </div>
+      <div>
+        <center><img style="height:256px;width:256px;display:none;padding-bottom:10px" id="your-image" /></center>
+      </div>
+      
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <button type="submit" class="action-button">Finish</button>
+    </fieldset>  
+  </form>  
+</section> 
+<!-- End Multi step form -->
+<script>
+			var previewImage = function(event) {
+				var preview = document.getElementById('your-image');
+				preview.src = URL.createObjectURL(event.target.files[0]);
+				preview.style.display = "block";
+			}
+
+		</script>    
+</body>
+</html>

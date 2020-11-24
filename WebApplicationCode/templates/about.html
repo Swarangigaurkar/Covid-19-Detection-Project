@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid-Detector</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <style type="text/css">
+        #hero
+        {
+            background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url("static\\download-min.jpg");
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+        form
+        {
+                    margin: 20vh;
+                    height: 30%;
+                    padding-top: 44px;
+                    padding-bottom: 25px;
+                    padding-right: 25PX;
+                    padding-left: 25PX;
+
+                    border-style: solid;
+                     border-width: 1px;
+                    border-color: black;
+}
+        }
+    </style>
+
+    <body>
+       <header>
+<div class="custom-padding">
+  <nav>
+    <div class="logo">covid-19 detector</div>
+
+    <ul class="menu-area">
+      <li><a href="{{ url_for('index') }}" >Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+        </header>
+        <section id="hero">
+            <form >
+                <p>
+                    This is a web application that can help users detect the presence of Covid-19 by only analyzing chest x-rays.
+                    The users can upload the chest x-ray and the model predicts the disease. The chest xray scans can be divided into three types as Normal , Pneumonia and Covid-19.  
+                </p>
+                
+            </form>
+            
+        </section>
+</body>
+</html>

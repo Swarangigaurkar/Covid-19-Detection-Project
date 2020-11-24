@@ -1,0 +1,308 @@
+/*/*font Variables*/
+/*Color Variables*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,700,900");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),url('download-min.jpg');
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-position: center center;
+  height: 100vh;
+}
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 0px;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #333;
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+  width: 25%;
+  float: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+.menu-area a {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+.menu-area a.active,
+.menu-area a:hover {
+  background: #33AAFF;
+  color: #fff;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+.navbar
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 130px;
+    line-height: 50px;
+    background-color: rgba(214, 234, 248,0.5);
+  /* background-color: rgba(230,230,250,0.6);*/
+   
+}
+.multi_step_form {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    padding-top: 44px;
+}
+.multi_step_form #msform {
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+  min-height: 750px;
+  max-width: 810px;
+  margin: 0 auto;
+  background: #ffffff;
+  z-index: 1;
+  border: 1px solid #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.multi_step_form #msform .tittle {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.multi_step_form #msform .tittle h2 {
+  font: 500 24px/35px "Roboto", sans-serif;
+  color: #3f4553;
+  padding-bottom: 5px;
+}
+.multi_step_form #msform .tittle p {
+  font: 400 16px/28px "Roboto", sans-serif;
+  color: #5f6771;
+}
+.multi_step_form #msform fieldset {
+  border: 0;
+  padding: 20px 105px 0;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.multi_step_form #msform fieldset:not(:first-of-type) {
+  display: none;
+}
+.multi_step_form #msform fieldset h3 {
+  font: 500 18px/35px "Roboto", sans-serif;
+  color: #3f4553;
+}
+.multi_step_form #msform fieldset h6 {
+  font: 400 15px/28px "Roboto", sans-serif;
+  color: #5f6771;
+  padding-bottom: 30px;
+}
+
+.multi_step_form #msform fieldset .form-group {
+  padding: 0 10px;
+}
+
+.multi_step_form #msform fieldset .input-group .custom-file {
+  width: 100%;
+  height: auto;
+}
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label {
+  width: 168px;
+  border-radius: 5px;
+  cursor: pointer;
+  font: 700 14px/40px "Roboto", sans-serif;
+  border: 1px solid #99a2a8;
+  text-align: center;
+  transition: all 300ms linear 0s;
+  color: #5f6771;
+}
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover, .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
+  background: #5cb85c;
+  border-color: #5cb85c;
+  color: #fff;
+}
+.multi_step_form #msform fieldset .input-group .custom-file input {
+  display: none;
+}
+.multi_step_form #msform fieldset .file_added {
+  text-align: left;
+  padding-left: 190px;
+  padding-bottom: 60px;
+}
+.multi_step_form #msform fieldset .file_added li {
+  font: 400 15px/28px "Roboto", sans-serif;
+  color: #5f6771;
+}
+.multi_step_form #msform fieldset .file_added li a {
+  color: #5cb85c;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  padding-left: 15px;
+}
+.multi_step_form #msform fieldset .file_added li a i {
+  font-size: 22px;
+  padding-right: 8px;
+  position: absolute;
+  left: 0;
+  transform: rotate(20deg);
+}
+.multi_step_form #msform #progressbar {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.multi_step_form #msform #progressbar li {
+  list-style-type: none;
+  color: #99a2a8;
+  font-size: 9px;
+  width: calc(100%/3);
+  float: left;
+  position: relative;
+  font: 500 13px/1 "Roboto", sans-serif;
+}
+.multi_step_form #msform #progressbar li:nth-child(2):before {
+  content: "\f12f";
+}
+.multi_step_form #msform #progressbar li:nth-child(3):before {
+  content: "\f457";
+}
+.multi_step_form #msform #progressbar li:before {
+  content: "\f1fa";
+  font: normal normal normal 30px/50px Ionicons;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  background: #eaf0f4;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+.multi_step_form #msform #progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: #eaf0f4;
+  position: absolute;
+  left: -50%;
+  top: 21px;
+  z-index: -1;
+}
+.multi_step_form #msform #progressbar li:last-child:after {
+  width: 150%;
+}
+.multi_step_form #msform #progressbar li.active {
+  color: #5cb85c;
+}
+.multi_step_form #msform #progressbar li.active:before, .multi_step_form #msform #progressbar li.active:after {
+  background: #5cb85c;
+  color: white;
+}
+.multi_step_form #msform .action-button {
+  background: #5cb85c;
+  color: white;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 130px;
+  font: 700 14px/40px "Roboto", sans-serif;
+  border: 1px solid #5cb85c;
+  margin: 0 5px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
+  background: #405867;
+  border-color: #405867;
+}
+.multi_step_form #msform .previous_button {
+  background: transparent;
+  color: #99a2a8;
+  border-color: #99a2a8;
+}
+.multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
+  background: #405867;
+  border-color: #405867;
+  color: #fff;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #ee0979;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}

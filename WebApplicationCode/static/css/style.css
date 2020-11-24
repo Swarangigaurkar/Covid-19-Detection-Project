@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    margin-top: 50px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    box-shadow: 0 4px 8px 0 rgba(0.7,0.7,0.7,0.7);
+}
+
+header * {
+    display: inline;
+    height: 50px;
+}
+
+header ul {
+    justify-content: center;
+    padding: 0;
+    margin-left: 50vh;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    color: #33AAFF;
+    font-size: 20px;
+    padding: 6px 20px;
+    font-family: 'Roboto' , sans-serif;
+    transition: .4s;
+    box-shadow: 0 4px 8px 0 ;
+}
+header ul li a.active,
+header ul li a:hover{
+    background: white;
+    color: black;
+    border-radius: 2px;
+}
+
+#hero{
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    
+    background-size: cover; /* Add this line */
+    background-position: center center; /* Add this line */
+    background-repeat: no-repeat; /* Add this line */
+    background-attachment: fixed; /* Add this line */
+}
+/*
+#hero .profile-img {
+    width: 300px;
+    border-radius: 50%;
+}
+*/
+.navbar
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    line-height: 50px;
+    background-color: rgba(214, 234, 248,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0.5,0.5,0.5,0.5);
+}
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+#hero h1 {
+
+    font-size: 3em;
+}
+
+section h3 {
+    font-size: 1.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Add everything below here */
+
+#hero {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), {{ url_for('static', filename='pics/img1.jpg') }}";
+}
+.center
+{
+    padding-left: 50vh;
+    padding-top: 35vh;
+    border-color: rgba(201, 76, 76, 0.3);
+    margin-left: 30px;
+}
+.card1{
+  /* Add shadows to create the "card" effect */
+margin-right: 100px;
+  border-radius: 5px;
+  float: left;
+  width: 35vh;
+  height:44vh;
+  box-shadow: 0 4px 8px 0 rgba(0.7,0.7,0.7,0.7);
+  transition: 0.3s;
+  border-color: rgba(201, 76, 76, 0.3);
+}
+.card1 img
+{
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 80%;
+}
+
+/*On mouse-over, add a deeper shadow*/ 
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  opacity: 0.8;
+}
+
+.container1
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container1 button
+{
+    float: center;
+    font-weight: 400;
+    font-family: 'Roboto' ,sans-serif;
+    border-radius: 10px;
+    color: white;
+    background: #33AAFF;
+    width: 50%;
+    height: 40px;
+    align-content: center;
+}
+.container1 button:hover
+{
+    background: #337CFF;
+}
+ .example {
+      cursor: pointer;
+      height: 35.2vh;
+      position: relative;
+      overflow: hidden;
+      width: 35vh;
+      text-align:center;
+      align-items: center;
+      justify-content: center;
+      }
+      .example .fadedbox {
+      background-color: #666666;
+      position: absolute;
+      border-radius: 5px;
+      top: 0;
+      left: 0;
+      color: #fff;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      -ms-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      opacity: 0;
+      width: 360px;
+      height: 100px;
+      padding: 130px 20px;
+      }
+      .example:hover .fadedbox { opacity: 0.8; }
+      .example .text {
+        text-align: center;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      -ms-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      transform: translateY(30px);
+      -webkit-transform: translateY(30px);
+      }
+      .example .title {
+      font-size: 0.8em;
+      opacity: 0;
+      transition-delay: 0.2s;
+      transition-duration: 0.3s;
+      }
+      .example:hover .title,
+      .example:focus .title {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      }
+.card2{
+  /* Add shadows to create the "card" effect */
+  margin-left: 100px;
+  border-radius: 5px;
+  float: right;
+  width: 35vh;
+  height:44vh;
+  box-shadow: 0 4px 8px 0 rgba(0.7,0.7,0.7,0.7);
+  transition: 0.3s;
+  border-color: rgba(201, 76, 76, 0.3);
+}
+.card2 img
+{
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 80%;
+}
+.container2
+{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container2 button
+{
+    float: center;
+    font-weight: 400;
+    font-family: 'Roboto' ,sans-serif;
+    border-radius: 10px;
+    color: white;
+    background: #33AAFF;
+    width: 50%;
+    height: 40px;
+    align-content: center;
+}
+.container2 button:hover
+{
+    background: #337CFF;
+}
+/*On mouse-over, add a deeper shadow*/ 
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  opacity: 0.8;
+}

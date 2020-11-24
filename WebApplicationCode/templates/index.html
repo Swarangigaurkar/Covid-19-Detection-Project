@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Covid-19 detector</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style type="text/css">
+    form
+        {
+          border:none;
+        }
+        fieldset
+        {
+          border:none;
+        }
+</style>
+<body>
+  <header>
+<div class="custom-padding">
+  <nav>
+    <div class="logo">covid-19 detector</div>
+
+    <ul class="menu-area">
+      <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+<main>
+            <section id="hero">
+                <div class="navbar">
+                    <h1>Covid-19 Detector</h1>
+                    <h3>Where AI meets Medical </h3>
+                </div>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="section-inner">
+                </div>
+                <fieldset>
+                    <div class="center">
+                    <div class="card1" border-color: #92a8d1>
+                        <div class="example">
+                <img src="static\img2.png" style="width: 100%" class="image">
+                <div class="fadedbox">
+        <div class="text1"> <h3>Upload CXR</h3> </div>
+                </div>
+                </div>
+            <div class = "container1">
+                <button type="submit"  href="{{ url_for('upload') }}">Check</button> 
+        </div>
+                </div>
+                <div class="card2" border-color: #92a8d1>
+                    <div class="example">
+                <img src="static\img3.jpg" style="width: 100%">
+                <div class="fadedbox">
+        <div class="text1"> <h3>Add CXR to Dataset</h3> </div>
+                </div>
+                </div>
+            <div class = "container2">
+                <button type="submit" >Add To DB</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>
+            </section>
+        </main>
+</body>
+</html>
+

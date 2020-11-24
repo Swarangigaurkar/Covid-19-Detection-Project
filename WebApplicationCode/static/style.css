@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),url('static\\download-min.jpg');
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-position: center center;
+  height: 100vh;
+}
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 0px;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #333;
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.logo {
+  width: 25%;
+  float: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.menu-area li {
+  display: inline-block;
+}
+
+.menu-area a {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+.menu-area a.active,
+.menu-area a:hover {
+  background: #33AAFF;
+  color: #fff;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+
+.navbar
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 130px;
+    line-height: 50px;
+    background-color: rgba(214, 234, 248,0.5);
+  /* background-color: rgba(230,230,250,0.6);*/
+   
+}
+
+#hero h1 {
+  margin-top: 2.5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+    font-size: 3em;
+}
+
+#hero h3 {
+    font-size: 1.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Add everything below here */
+
+#hero {
+   /* background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('img1.jpg');*/
+}
+.center
+{
+  padding-left: 25%;
+  padding-right: 25%;
+      padding-top: 18%;
+    border-color: rgba(201, 76, 76, 0.3);
+}
+.card1{
+  /* Add shadows to create the "card" effect */
+  border-radius: 5px;
+  float: left;
+  width: 35vh;
+  height:44vh;
+  box-shadow: 0 4px 8px 0 rgba(0.7,0.7,0.7,0.7);
+  transition: 0.3s;
+  border-color: rgba(201, 76, 76, 0.3);
+}
+.card1 img
+{
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 80%;
+}
+
+/*On mouse-over, add a deeper shadow*/ 
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  opacity: 0.8;
+}
+
+.container1
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container1 button
+{
+    float: center;
+    font-weight: 400;
+    font-family: 'Roboto' ,sans-serif;
+    border-radius: 10px;
+    color: white;
+    background: #33AAFF;
+    width: 50%;
+    height: 40px;
+    align-content: center;
+}
+.container1 button:hover
+{
+    background: #337CFF;
+}
+
+ .example {
+      cursor: pointer;
+      height: 35.2vh;
+      position: relative;
+      overflow: hidden;
+      width: 35vh;
+      text-align:center;
+      align-items: center;
+      justify-content: center;
+      }
+      .example .fadedbox {
+      background-color: #666666;
+      position: absolute;
+      border-radius: 5px;
+      top: 0;
+      left: 0;
+      color: #fff;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      -ms-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      opacity: 0;
+      width: 360px;
+      height: 100px;
+      padding: 130px 20px;
+      }
+      .example:hover .fadedbox { opacity: 0.8; }
+      .example .text {
+        text-align: center;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      -ms-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      transform: translateY(30px);
+      -webkit-transform: translateY(30px);
+      }
+      .example .title {
+      font-size: 0.8em;
+      opacity: 0;
+      transition-delay: 0.2s;
+      transition-duration: 0.3s;
+      }
+      .example:hover .title,
+      .example:focus .title {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      }
+      
+.card2{
+  /* Add shadows to create the "card" effect */
+  border-radius: 5px;
+  float: right;
+  width: 35vh;
+  height:44vh;
+  box-shadow: 0 4px 8px 0 rgba(0.7,0.7,0.7,0.7);
+  transition: 0.3s;
+  border-color: rgba(201, 76, 76, 0.3);
+}
+.card2 img
+{
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 80%;
+}
+.container2
+{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container2 button
+{
+    float: center;
+    font-weight: 400;
+    font-family: 'Roboto' ,sans-serif;
+    border-radius: 10px;
+    color: white;
+    background: #33AAFF;
+    width: 50%;
+    height: 40px;
+    align-content: center;
+}
+.container2 button:hover
+{
+    background: #337CFF;
+}
+/*On mouse-over, add a deeper shadow*/ 
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  opacity: 0.8;
+}
